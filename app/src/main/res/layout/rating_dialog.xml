@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="1.0"
+        android:max="5"
+        android:isIndicator="false"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/alert_rating"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingtxt"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@id/alert_rating"
+        android:text="Very Bad"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/edit_back"
+        android:layout_below="@id/ratingtxt"
+        android:layout_margin="10dp"
+        android:hint="Enter Comment"
+        android:maxLines="5"
+        android:padding="3dp"
+        android:textSize="17sp"
+        android:textColor="@color/dark"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:id="@+id/comment"/>
+</RelativeLayout>
