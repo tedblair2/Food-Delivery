@@ -18,10 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
         auth=FirebaseAuth.getInstance()
-//        CoroutineScope(Dispatchers.Main).launch {
-//            delay(1200)
-//
-//        }
         binding.motionlayout.startLayoutAnimation()
         binding.motionlayout.setTransitionListener(object:MotionLayout.TransitionListener{
             override fun onTransitionStarted(motionLayout: MotionLayout?, startId: Int, endId: Int) {

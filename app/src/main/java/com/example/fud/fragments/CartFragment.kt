@@ -36,7 +36,6 @@ import com.example.fud.network.ApiService
 import com.example.fud.network.SearchService
 import com.example.fud.viewmodel.FudViewModel
 import com.google.android.material.snackbar.Snackbar
-import com.google.auth.oauth2.GoogleCredentials
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -124,11 +123,11 @@ class CartFragment : Fragment() {
     }
     private fun getAccessToken(){
         try{
-            val inputstream=requireActivity().assets.open("chatapp-b923b-firebase-adminsdk-cytal-beb4df5752.json")
-            System.setProperty("GOOGLE_APPLICATION_CREDENTIALS", inputstream.toString())
-            val credentials=GoogleCredentials.fromStream(inputstream).createScoped(listOf(MESSAGING_SCOPE))
-            credentials.refreshIfExpired()
-            token=credentials.accessToken.tokenValue
+//            val inputstream=requireActivity().assets.open("secret_key_from_database.json")
+//            System.setProperty("GOOGLE_APPLICATION_CREDENTIALS", inputstream.toString())
+//            val credentials=GoogleCredentials.fromStream(inputstream).createScoped(listOf(MESSAGING_SCOPE))
+//            credentials.refreshIfExpired()
+//            token=credentials.accessToken.tokenValue
 
             Log.d("CartFragment",token)
         }catch (e:Exception){
